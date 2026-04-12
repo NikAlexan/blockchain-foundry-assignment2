@@ -30,57 +30,15 @@ Implement a simplified lending protocol with collateral deposit, borrowing, repa
 Provide a workflow diagram for:
 `deposit -> borrow -> repay -> withdraw`.
 
-## Evidence placeholders
-- `[INSERT SCREENSHOT: LendingPool tests passing output]`
-- `[INSERT SCREENSHOT: LendingPool gas report section]`
-- `[INSERT WORKFLOW DIAGRAM IMAGE/PDF HERE]`
-- `[INSERT LOG EXCERPT: liquidation and interest-accrual test output]`
+## Evidence
+### LendingPool tests passing output
+![Task 5 Lending Tests](../artifacts/screenshots/task5-lending-tests/screen%201.png)
 
-## Commands to capture each screenshot
-Run from project root:
+### LendingPool gas report section
+![Task 5 Lending Gas](../artifacts/screenshots/task5-lending-tests/screen%202.png)
 
-```bash
-cd Project
-export PATH="$HOME/.foundry/bin:$PATH"
-mkdir -p artifacts/logs/forge artifacts/docs
-```
+### Workflow diagram image
+![Task 5 Workflow Diagram](../artifacts/screenshots/task5-lending-tests/screen%203.svg)
 
-1. **LendingPool tests passing output**
-```bash
-forge test --match-path test/unit/LendingPool.t.sol -vv | tee artifacts/logs/forge/task5-lending-tests.log
-```
-
-2. **LendingPool gas report section**
-```bash
-forge test --match-path test/unit/LendingPool.t.sol --gas-report | tee artifacts/logs/forge/task5-lending-gas.log
-```
-
-3. **Workflow diagram (deposit -> borrow -> repay -> withdraw)**
-Use Mermaid Live Editor: `https://mermaid.live`
-
-```mermaid
-flowchart TD
-    A[User has collateral token] --> B[Deposit collateral]
-    B --> C[Pool updates collateral balance]
-    C --> D{Health Factor >= threshold?}
-    D -->|Yes| E[Borrow debt token]
-    E --> F[Pool updates debt + interest accrual]
-    F --> G[Repay debt token]
-    G --> H{Debt fully repaid?}
-    H -->|No| F
-    H -->|Yes| I[Withdraw collateral]
-    I --> J[Pool updates collateral balance to zero]
-    J --> K[Flow complete]
-    D -->|No| L[Borrow rejected]
-```
-
-Export as PNG/SVG and save to:
-```bash
-artifacts/docs/screen\ 3.svg
-```
-
-4. **Liquidation + interest-accrual log excerpt**
-```bash
-forge test --match-path test/unit/LendingPool.t.sol --match-test "test(InterestAccruesOverTime|LiquidationAfterPriceDrop).*" -vv | tee artifacts/logs/forge/task5-lending-focus.log
-grep -E "Interest|Liquidation|PASS|Ran" artifacts/logs/forge/task5-lending-focus.log
-```
+### Liquidation and interest-accrual excerpt
+![Task 5 Liquidation and Interest](../artifacts/screenshots/task5-lending-tests/screen%204.png)

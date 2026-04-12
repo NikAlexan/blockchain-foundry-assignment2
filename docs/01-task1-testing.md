@@ -22,43 +22,20 @@ Fuzz tests validate behavior over broad randomized input ranges. They are best f
 
 In practice, use both: unit tests for specification fidelity, fuzz tests for robustness under high input variance, and invariants for global safety properties.
 
-## Evidence placeholders
-- `[INSERT SCREENSHOT: Task 1 unit tests passing output]`
-- `[INSERT SCREENSHOT: Task 1 fuzz tests passing output]`
-- `[INSERT SCREENSHOT: Task 1 invariant tests passing output]`
-- `[INSERT SCREENSHOT: forge coverage output/report]`
-- `[INSERT LOG EXCERPT: key test summary lines for Task 1]`
+## Evidence
+### Unit tests passing output
+![Task 1 Unit Tests](../artifacts/screenshots/task1-fuzz-invariant/screen%201.png)
 
-## Commands to capture each screenshot
-Run from project root:
+### Fuzz tests passing output
+![Task 1 Fuzz Tests](../artifacts/screenshots/task1-fuzz-invariant/screen%202.png)
 
-```bash
-cd Project
-export PATH="$HOME/.foundry/bin:$PATH"
-mkdir -p artifacts/logs/forge
-```
+### Invariant tests passing output
+![Task 1 Invariant Tests](../artifacts/screenshots/task1-fuzz-invariant/screen%203.png)
 
-1. **Unit tests passing output**
-```bash
-forge test --match-path test/unit/SimpleERC20.t.sol -vv | tee artifacts/logs/forge/task1-unit.log
-```
+### Coverage output/report
+![Task 1 Coverage Part 1](../artifacts/screenshots/task1-fuzz-invariant/screen%204-1.png)
+![Task 1 Coverage Part 2](../artifacts/screenshots/task1-fuzz-invariant/screen%204-2.png)
+![Task 1 Coverage Part 3](../artifacts/screenshots/task1-fuzz-invariant/screen%204-3.png)
 
-2. **Fuzz tests passing output**
-```bash
-forge test --match-path test/fuzz/SimpleERC20Fuzz.t.sol -vv | tee artifacts/logs/forge/task1-fuzz.log
-```
-
-3. **Invariant tests passing output**
-```bash
-forge test --match-path test/invariant/SimpleERC20Invariant.t.sol -vv | tee artifacts/logs/forge/task1-invariant.log
-```
-
-4. **Coverage output/report**
-```bash
-forge coverage --no-match-path "test/fork/*" | tee artifacts/logs/forge/task1-coverage.log
-```
-
-5. **Key log excerpt lines**
-```bash
-grep -E "Ran|passed|failed|invariant_" artifacts/logs/forge/task1-*.log
-```
+### Key test summary/log excerpt
+![Task 1 Summary](../artifacts/screenshots/task1-fuzz-invariant/screen%205.png)

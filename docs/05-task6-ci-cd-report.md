@@ -23,46 +23,18 @@ Create and document a CI pipeline that validates build quality, test correctness
 ## Required environment
 - GitHub secret: `MAINNET_RPC_URL` for fork tests.
 
-## Evidence placeholders
-- `[INSERT SCREENSHOT: successful GitHub Actions run summary]`
-- `[INSERT SCREENSHOT: test stage logs]`
-- `[INSERT SCREENSHOT: gas report stage output]`
-- `[INSERT SCREENSHOT: Slither stage output]`
-- `[INSERT LOG EXCERPT: key workflow run lines]`
+## Evidence
+### Successful GitHub Actions run summary
+![Task 6 GitHub Actions Summary](../artifacts/screenshots/task6-ci-cd/screen%201.png)
 
-## Commands to capture each screenshot
-Run from project root:
+### Test stage logs
+![Task 6 Test Stage](../artifacts/screenshots/task6-ci-cd/screen%202.png)
 
-```bash
-cd Project
-export PATH="$HOME/.foundry/bin:$PATH"
-mkdir -p artifacts/logs/forge artifacts/logs/slither
-```
+### Gas report stage output
+![Task 6 Gas Report](../artifacts/screenshots/task6-ci-cd/screen%202.png)
 
-1. **Successful GitHub Actions run summary**
-```bash
-git add .
-git commit -m "docs: add screenshot command references"
-git push
-```
-Then open: `https://github.com/<OWNER>/<REPO>/actions` and screenshot the green successful run row.
+### Slither stage output
+![Task 6 Slither Stage](../artifacts/screenshots/task6-ci-cd/screen%203.png)
 
-2. **Test stage logs (local equivalent and artifact log)**
-```bash
-forge test --no-match-path "test/fork/*" -vv | tee artifacts/logs/forge/task6-tests.log
-```
-
-3. **Gas report stage output (local equivalent and artifact log)**
-```bash
-forge test --gas-report --no-match-path "test/fork/*" | tee artifacts/logs/forge/task6-gas.log
-```
-
-4. **Slither stage output (local equivalent and artifact log)**
-```bash
-slither src --exclude-dependencies | tee artifacts/logs/slither/task6-slither.log
-```
-
-5. **Key workflow run lines**
-```bash
-grep -E "PASS|Ran|failed|Gas|Slither" artifacts/logs/forge/task6-tests.log artifacts/logs/forge/task6-gas.log artifacts/logs/slither/task6-slither.log
-```
+### Key workflow run lines
+![Task 6 Workflow Excerpt](../artifacts/screenshots/task6-ci-cd/screen%203.png)

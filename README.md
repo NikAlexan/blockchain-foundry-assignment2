@@ -47,6 +47,5 @@ Workflow file: `.github/workflows/test.yml`
 - `artifacts/` — placeholders for screenshots/logs/user-provided evidence
 
 ## Documentation and submission
-- Submission checklist: `SUBMISSION_CHECKLIST.md`
 - AMM math analysis: `docs/amm-mathematical-analysis.md`
-- Task-by-task documentation package: `docs/01-task1-testing.md` to `docs/06-final-submission-map.md`
+- Task-by-task documentation package: `docs/01-task1-testing.md` to `docs/05-task6-ci-cd-report.md`

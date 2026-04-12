@@ -28,37 +28,15 @@ Implement a two-token AMM with constant-product pricing, LP accounting, swap fee
 ## Gas profiling summary
 Gas reports are generated via `forge test --gas-report`. Include final measured values from your environment in the placeholder section below.
 
-## Evidence placeholders
-- `[INSERT SCREENSHOT: AMM unit/fuzz tests passing output]`
-- `[INSERT SCREENSHOT: AMM swap/add/remove test group output]`
-- `[INSERT SCREENSHOT: AMM gas report table]`
-- `[INSERT METRIC TABLE: AMM operation gas numbers from your final run]`
+## Evidence
+### AMM unit/fuzz tests passing output
+![Task 3 AMM Unit and Fuzz](../artifacts/screenshots/task3-amm-tests-gas/screen%201.png)
 
-## Commands to capture each screenshot
-Run from project root:
+### AMM swap/add/remove group output
+![Task 3 AMM Swap Add Remove](../artifacts/screenshots/task3-amm-tests-gas/screen%202.png)
 
-```bash
-cd Project
-export PATH="$HOME/.foundry/bin:$PATH"
-mkdir -p artifacts/logs/forge
-```
+### AMM gas report table
+![Task 3 AMM Gas Report](../artifacts/screenshots/task3-amm-tests-gas/screen%203.png)
 
-1. **AMM unit + fuzz passing output**
-```bash
-(forge test --match-path test/unit/AMM.t.sol -vv && forge test --match-path test/fuzz/AMMFuzz.t.sol -vv) | tee artifacts/logs/forge/task3-amm-unit-fuzz.log
-```
-
-2. **Swap/add/remove group output**
-```bash
-forge test --match-path test/unit/AMM.t.sol --match-test "test(AddLiquidity|RemoveLiquidity|Swap).*" -vv | tee artifacts/logs/forge/task3-amm-groups.log
-```
-
-3. **AMM gas report table**
-```bash
-forge test --match-path test/unit/AMM.t.sol --gas-report | tee artifacts/logs/forge/task3-amm-gas.log
-```
-
-4. **Operation gas numbers for metric table**
-```bash
-grep -E "AMM|addLiquidity|removeLiquidity|swap|getAmountOut" artifacts/logs/forge/task3-amm-gas.log
-```
+### AMM metrics table/source screenshot
+![Task 3 AMM Metrics](../artifacts/screenshots/task3-amm-tests-gas/screen%204.png)
