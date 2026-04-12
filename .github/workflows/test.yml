@@ -1,0 +1,50 @@
+name: smart-contract-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      MAINNET_RPC_URL: ${{ secrets.MAINNET_RPC_URL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Install dependencies
+        run: |
+          if [ ! -d lib/forge-std ]; then
+            forge install foundry-rs/forge-std --no-git
+          fi
+
+      - name: Compile contracts
+        run: forge build -vvv
+
+      - name: Ensure fork test RPC is configured
+        run: |
+          if [ -z "$MAINNET_RPC_URL" ]; then
+            echo "MAINNET_RPC_URL secret is required to run all tests (including test/fork/*)."
+            exit 1
+          fi
+
+      - name: Run all tests
+        run: forge test -vvv
+
+      - name: Generate gas report
+        run: forge test --gas-report -vvv
+
+      - name: Run Slither analysis
+        uses: crytic/slither-action@v0.4.0
+        with:
+          target: .
+          fail-on: high

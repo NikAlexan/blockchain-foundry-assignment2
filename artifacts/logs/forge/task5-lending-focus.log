@@ -1,0 +1,8 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/unit/LendingPool.t.sol:LendingPoolUnitTest
+[PASS] testInterestAccruesOverTime() (gas: 133877)
+[PASS] testLiquidationAfterPriceDrop() (gas: 170829)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 811.40µs (336.01µs CPU time)
+
+Ran 1 test suite in 6.62ms (811.40µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

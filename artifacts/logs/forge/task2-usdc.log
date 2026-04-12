@@ -1,0 +1,7 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/fork/ForkMainnet.t.sol:ForkMainnetTest
+[PASS] testFork_ReadUSDC_TotalSupply() (gas: 12896)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 7.73s (4.00s CPU time)
+
+Ran 1 test suite in 7.73s (7.73s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

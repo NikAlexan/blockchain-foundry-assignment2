@@ -1,0 +1,9 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/fork/ForkMainnet.t.sol:ForkMainnetTest
+[PASS] testFork_ReadUSDC_TotalSupply() (gas: 12896)
+[PASS] testFork_RollFork_AdvancesSnapshotBlock() (gas: 3305)
+[PASS] testFork_UniswapV2SwapExactETHForUSDC() (gas: 127113)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.33s (1.44s CPU time)
+
+Ran 1 test suite in 2.34s (2.33s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

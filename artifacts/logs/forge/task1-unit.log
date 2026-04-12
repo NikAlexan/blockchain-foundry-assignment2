@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 13 tests for test/unit/SimpleERC20.t.sol:SimpleERC20UnitTest
+[PASS] testApproveEmitsApprovalEvent() (gas: 39455)
+[PASS] testApproveSetsAllowanceAndReturnsTrue() (gas: 38512)
+[PASS] testMetadata() (gas: 18594)
+[PASS] testMintEmitsTransferFromZeroAddress() (gas: 41812)
+[PASS] testMintRevertsForZeroAddress() (gas: 8727)
+[PASS] testMintUpdatesBalanceAndSupply() (gas: 39074)
+[PASS] testTransferFromMovesBalanceAndDecreasesAllowance() (gas: 76910)
+[PASS] testTransferFromRevertsForZeroFromAddress() (gas: 15534)
+[PASS] testTransferFromRevertsWhenAllowanceInsufficient() (gas: 41635)
+[PASS] testTransferFromRevertsWhenBalanceInsufficient() (gas: 46104)
+[PASS] testTransferMovesBalanceAndReturnsTrue() (gas: 45025)
+[PASS] testTransferRevertsForZeroAddressRecipient() (gas: 11388)
+[PASS] testTransferRevertsWhenInsufficientBalance() (gas: 15637)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 613.08µs (1.18ms CPU time)
+
+Ran 1 test suite in 8.39ms (613.08µs CPU time): 13 tests passed, 0 failed, 0 skipped (13 total tests)

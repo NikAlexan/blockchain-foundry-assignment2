@@ -1,0 +1,7 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/fork/ForkMainnet.t.sol:ForkMainnetTest
+[PASS] testFork_UniswapV2SwapExactETHForUSDC() (gas: 127113)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 10.15s (8.59s CPU time)
+
+Ran 1 test suite in 10.15s (10.15s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

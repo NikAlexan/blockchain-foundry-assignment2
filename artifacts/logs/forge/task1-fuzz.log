@@ -1,0 +1,9 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/fuzz/SimpleERC20Fuzz.t.sol:SimpleERC20FuzzTest
+[PASS] testFuzz_Transfer(uint256) (runs: 256, μ: 51768, ~: 52472)
+[PASS] testFuzz_TransferRevertsWhenAmountExceedsBalance(uint256) (runs: 256, μ: 16980, ~: 16976)
+[PASS] testFuzz_TransferToSelfKeepsBalance(uint256) (runs: 256, μ: 18546, ~: 18308)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 7.65ms (19.27ms CPU time)
+
+Ran 1 test suite in 10.28ms (7.65ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

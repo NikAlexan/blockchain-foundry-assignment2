@@ -1,0 +1,21 @@
+No files changed, compilation skipped
+
+Ran 15 tests for test/unit/AMM.t.sol:AMMUnitTest
+[PASS] testAddLiquidityFirstProviderEmitsEvent() (gas: 209944)
+[PASS] testAddLiquidityFirstProviderMintsSqrt() (gas: 231838)
+[PASS] testAddLiquidityRevertsOnMinLpSlippage() (gas: 38648)
+[PASS] testAddLiquidityRevertsOnZeroAmount() (gas: 11122)
+[PASS] testAddLiquiditySubsequentMintsProportionalLP() (gas: 278453)
+[PASS] testAddLiquiditySubsequentRequiresProportionalAmounts() (gas: 212519)
+[PASS] testRemoveLiquidityFull() (gas: 179880)
+[PASS] testRemoveLiquidityPartial() (gas: 229337)
+[PASS] testRemoveLiquidityRevertsOnMinAmountSlippage() (gas: 210615)
+[PASS] testRemoveLiquidityRevertsOnZeroLPAmount() (gas: 11073)
+[PASS] testSwapAToB() (gas: 246075)
+[PASS] testSwapBToA() (gas: 246131)
+[PASS] testSwapEmitsEvent() (gas: 247001)
+[PASS] testSwapRevertsForSlippage() (gas: 217454)
+[PASS] testSwapRevertsForUnsupportedToken() (gas: 482823)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 1.42ms (4.16ms CPU time)
+
+Ran 1 test suite in 8.23ms (1.42ms CPU time): 15 tests passed, 0 failed, 0 skipped (15 total tests)

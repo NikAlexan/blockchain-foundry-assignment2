@@ -1,0 +1,30 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/invariant/SimpleERC20Invariant.t.sol:SimpleERC20InvariantTest
+[PASS] invariant_EachUserBalanceWithinTotalSupply() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+[PASS] invariant_SumOfTrackedBalancesEqualsTotalSupply() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+[PASS] invariant_TotalSupplyConstant() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 658.59ms (1.56s CPU time)
+
+Ran 1 test suite in 659.51ms (658.59ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

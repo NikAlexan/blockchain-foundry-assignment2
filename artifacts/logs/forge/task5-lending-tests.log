@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 13 tests for test/unit/LendingPool.t.sol:LendingPoolUnitTest
+[PASS] testBorrowAboveLtvReverts() (gas: 103975)
+[PASS] testBorrowWithZeroCollateralReverts() (gas: 40129)
+[PASS] testBorrowWithinLtv() (gas: 134475)
+[PASS] testDepositTracksPosition() (gas: 103659)
+[PASS] testInterestAccruesOverTime() (gas: 133877)
+[PASS] testLiquidationAfterPriceDrop() (gas: 170829)
+[PASS] testLiquidationHealthyPositionReverts() (gas: 135318)
+[PASS] testRepayFullCapsToDebt() (gas: 120958)
+[PASS] testRepayPartial() (gas: 140802)
+[PASS] testRepayWithoutDebtReverts() (gas: 35457)
+[PASS] testWithdrawWithDebtAllowedWhenHealthFactorAboveOne() (gas: 141749)
+[PASS] testWithdrawWithOutstandingDebtCanRevertOnHealthFactor() (gas: 132748)
+[PASS] testWithdrawWithoutDebt() (gas: 111306)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 919.72µs (1.80ms CPU time)
+
+Ran 1 test suite in 7.31ms (919.72µs CPU time): 13 tests passed, 0 failed, 0 skipped (13 total tests)

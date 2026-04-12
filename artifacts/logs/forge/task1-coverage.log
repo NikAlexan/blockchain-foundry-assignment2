@@ -1,0 +1,122 @@
+Compiling 32 files with Solc 0.8.24
+Solc 0.8.24 finished in 742.72ms
+Compiler run successful with warnings:
+Warning (2018): Function state mutability can be restricted to view
+  --> test/fork/ForkMainnet.t.sol:31:5:
+   |
+31 |     function testFork_ReadUSDC_TotalSupply() external {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Analysing contracts...
+Running tests...
+
+Ran 18 tests for test/unit/AMM.t.sol:AMMUnitTest
+[PASS] testAddLiquidityFirstProviderEmitsEvent() (gas: 244403)
+[PASS] testAddLiquidityFirstProviderMintsSqrt() (gas: 292118)
+[PASS] testAddLiquidityRevertsOnMinLpSlippage() (gas: 65349)
+[PASS] testAddLiquidityRevertsOnZeroAmount() (gas: 12657)
+[PASS] testAddLiquiditySubsequentMintsProportionalLP() (gas: 321363)
+[PASS] testAddLiquiditySubsequentRequiresProportionalAmounts() (gas: 248061)
+[PASS] testGetAmountOutFormula() (gas: 9339)
+[PASS] testInvariantKNonDecreaseAfterSwapWithFee() (gas: 277603)
+[PASS] testLargeSwapPriceImpact() (gas: 280482)
+[PASS] testRemoveLiquidityFull() (gas: 212694)
+[PASS] testRemoveLiquidityPartial() (gas: 270200)
+[PASS] testRemoveLiquidityRevertsOnMinAmountSlippage() (gas: 246507)
+[PASS] testRemoveLiquidityRevertsOnZeroLPAmount() (gas: 12742)
+[PASS] testSwapAToB() (gas: 288442)
+[PASS] testSwapBToA() (gas: 288435)
+[PASS] testSwapEmitsEvent() (gas: 289452)
+[PASS] testSwapRevertsForSlippage() (gas: 255570)
+[PASS] testSwapRevertsForUnsupportedToken() (gas: 895863)
+Suite result: ok. 18 passed; 0 failed; 0 skipped; finished in 9.06ms (35.38ms CPU time)
+
+Ran 3 tests for test/fuzz/SimpleERC20Fuzz.t.sol:SimpleERC20FuzzTest
+[PASS] testFuzz_Transfer(uint256) (runs: 256, μ: 57967, ~: 58345)
+[PASS] testFuzz_TransferRevertsWhenAmountExceedsBalance(uint256) (runs: 256, μ: 19337, ~: 19314)
+[PASS] testFuzz_TransferToSelfKeepsBalance(uint256) (runs: 256, μ: 21873, ~: 21308)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 36.18ms (79.80ms CPU time)
+
+Ran 2 tests for test/fuzz/AMMFuzz.t.sol:AMMFuzzTest
+[PASS] testFuzz_KNonDecreaseAfterSwap(uint256,bool) (runs: 256, μ: 76540, ~: 76538)
+[PASS] testFuzz_SwapAToBMatchesQuote(uint256) (runs: 256, μ: 79589, ~: 79434)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 64.98ms (97.08ms CPU time)
+
+Ran 13 tests for test/unit/SimpleERC20.t.sol:SimpleERC20UnitTest
+[PASS] testApproveEmitsApprovalEvent() (gas: 41405)
+[PASS] testApproveSetsAllowanceAndReturnsTrue() (gas: 40755)
+[PASS] testMetadata() (gas: 20591)
+[PASS] testMintEmitsTransferFromZeroAddress() (gas: 43511)
+[PASS] testMintRevertsForZeroAddress() (gas: 9690)
+[PASS] testMintUpdatesBalanceAndSupply() (gas: 41100)
+[PASS] testTransferFromMovesBalanceAndDecreasesAllowance() (gas: 82827)
+[PASS] testTransferFromRevertsForZeroFromAddress() (gas: 17455)
+[PASS] testTransferFromRevertsWhenAllowanceInsufficient() (gas: 44532)
+[PASS] testTransferFromRevertsWhenBalanceInsufficient() (gas: 49537)
+[PASS] testTransferMovesBalanceAndReturnsTrue() (gas: 47852)
+[PASS] testTransferRevertsForZeroAddressRecipient() (gas: 12648)
+[PASS] testTransferRevertsWhenInsufficientBalance() (gas: 16976)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 756.17ms (7.92ms CPU time)
+
+Ran 13 tests for test/unit/LendingPool.t.sol:LendingPoolUnitTest
+[PASS] testBorrowAboveLtvReverts() (gas: 108171)
+[PASS] testBorrowWithZeroCollateralReverts() (gas: 41480)
+[PASS] testBorrowWithinLtv() (gas: 142304)
+[PASS] testDepositTracksPosition() (gas: 108318)
+[PASS] testInterestAccruesOverTime() (gas: 141881)
+[PASS] testLiquidationAfterPriceDrop() (gas: 187270)
+[PASS] testLiquidationHealthyPositionReverts() (gas: 143016)
+[PASS] testRepayFullCapsToDebt() (gas: 130656)
+[PASS] testRepayPartial() (gas: 150500)
+[PASS] testRepayWithoutDebtReverts() (gas: 36159)
+[PASS] testWithdrawWithDebtAllowedWhenHealthFactorAboveOne() (gas: 152984)
+[PASS] testWithdrawWithOutstandingDebtCanRevertOnHealthFactor() (gas: 140146)
+[PASS] testWithdrawWithoutDebt() (gas: 118010)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 756.13ms (13.63ms CPU time)
+
+Ran 3 tests for test/invariant/SimpleERC20Invariant.t.sol:SimpleERC20InvariantTest
+[PASS] invariant_EachUserBalanceWithinTotalSupply() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+[PASS] invariant_SumOfTrackedBalancesEqualsTotalSupply() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+[PASS] invariant_TotalSupplyConstant() (runs: 128, calls: 8192, reverts: 0)
+
+╭------------------+----------------+-------+---------+----------╮
+| Contract         | Selector       | Calls | Reverts | Discards |
++================================================================+
+| InvariantHandler | transferRandom | 8192  | 0       | 0        |
+╰------------------+----------------+-------+---------+----------╯
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.56s (4.63s CPU time)
+
+Ran 6 test suites in 2.56s (4.18s CPU time): 52 tests passed, 0 failed, 0 skipped (52 total tests)
+
+╭-------------------------------------------+------------------+------------------+-----------------+-----------------╮
+| File                                      | % Lines          | % Statements     | % Branches      | % Funcs         |
++=====================================================================================================================+
+| script/Deploy.s.sol                       | 0.00% (0/7)      | 0.00% (0/8)      | 100.00% (0/0)   | 0.00% (0/1)     |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| src/AMM.sol                               | 100.00% (85/85)  | 91.41% (117/128) | 55.17% (16/29)  | 100.00% (9/9)   |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| src/LPToken.sol                           | 100.00% (17/17)  | 100.00% (14/14)  | 50.00% (7/14)   | 100.00% (3/3)   |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| src/LendingPool.sol                       | 94.00% (94/100)  | 85.16% (109/128) | 40.00% (14/35)  | 100.00% (13/13) |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| src/mocks/SimpleERC20.sol                 | 100.00% (29/29)  | 100.00% (23/23)  | 100.00% (10/10) | 100.00% (6/6)   |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| test/invariant/SimpleERC20Invariant.t.sol | 80.95% (17/21)   | 90.48% (19/21)   | 100.00% (1/1)   | 50.00% (2/4)    |
+|-------------------------------------------+------------------+------------------+-----------------+-----------------|
+| Total                                     | 93.44% (242/259) | 87.58% (282/322) | 53.93% (48/89)  | 91.67% (33/36)  |
+╰-------------------------------------------+------------------+------------------+-----------------+-----------------╯
